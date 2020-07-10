@@ -1,0 +1,19 @@
+title Part 0 exercise 06
+
+Actor User
+
+User->browser: Click Submit
+
+note over browser
+Browser executes JS code to add
+new note, rerender the page and
+send new note to server
+end note 
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note over server
+The POST request contains
+JSON-data with the content
+and the timestamp of the new note
+end note
